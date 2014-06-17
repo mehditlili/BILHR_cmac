@@ -1,0 +1,19 @@
+Implementation of the Cerebellar Model Articular Controller neural network and its application on the robot NAO for following a ball with the robots arm. The training and the testing is made at a fixed robots head position and allowing only two joints from the arm to move (elbow and shoulder).
+
+The training data is collected by putting the ball in NAO's hand and saving both ball position in the camera's image and shoulder and elbow joints angles.
+
+After the training is done, the robot will follow the ball continously as long as it appears in its field of view.
+
+A video demo can be found under this link:
+https://www.youtube.com/watch?v=Wfy7c-djeAs
+
+
+Files Included:
+central_node.cpp: A node handling all the joind and image data coming from the robot. We were given a squeleton as introduction to ROS and changed it, adding all the needed functions.
+
+cmac.h: Implementation of the Cerebellar Model Articular Controller
+
+training_data.txt: collected training data that can be used directly.
+
+
+These are only the source codes of a node contained in a package "BILHR_ros" having all needed messages for NAO installed (Check tutorial on ros.org about how to install ROS drivers for NAO).
